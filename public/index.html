@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .box {
+            height: 50px;
+            width: 50px;
+            outline: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="button" onclick="dowork()">
+        CLICK
+    </div>
+</body>
+<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+<script type="text/javascript">
+    var box = document.querySelector('.box');
+    var direction = -1;
+    function dowork () {
+
+        if (direction === -1) {
+            Velocity(box, {
+                'translateX': 200
+            });
+        } else {
+            Velocity(box, {
+                'translateX': 0
+            });
+        }
+
+
+        direction = direction * -1;
+    }
+
+
+</script>
+</html>
